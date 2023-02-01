@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const CustomInput = styled.input`
-  color: ${({ theme }) => theme.colors.textDarkStrong}
+  color: ${({ theme }) => theme.colors.textDarkStrong};
 
   font-weight: ${({ theme }) => theme.weights.regular};
   font-size: 1rem;
