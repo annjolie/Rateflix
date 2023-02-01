@@ -1,8 +1,8 @@
-import { addAlpha } from "@/utils/addAlpha";
+import { addAlpha } from "../../utils/addAlpha";
 
 const white = '#FFFFFF';
 const black = '#22223E';
-const primary600 = '#00A69B';
+const primary600 = '#FF5733';
 const blueGradient = '#009cf4';
 const greenGradient = ' #00d6b1';
 
@@ -44,7 +44,7 @@ const light = {
     greenGradientOP4: addAlpha(greenGradient, 0.4),
   },
   boxShadow: {
-    focusRingPrimary: '0 0 0 0.25rem #E0F6F3',
+    focusRingPrimary: '0 0 0 0.25rem  #ff80804a',
     focusRingGrey: '0 0 0 0.25rem #F5F5FB',
     focusRingError: '0 0 0 0.25rem rgba(243, 71, 92, 0.2)',
     focusRingDestructive: '0 0 0 0.25rem #FFECEE',
