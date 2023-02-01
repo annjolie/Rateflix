@@ -1,10 +1,10 @@
-import { addAlpha } from "../../utils/addAlpha";
+import { addAlpha } from '../../utils/addAlpha';
 
 const white = '#FFFFFF';
 const black = '#22223E';
 const primary600 = '#FF5733';
 const blueGradient = '#009cf4';
-const greenGradient = ' #00d6b1';
+const greenGradient = ' #f3db5b';
 
 const light = {
   colors: {
@@ -16,8 +16,8 @@ const light = {
     neutralN300: '#BCBCCC',
     neutralN900: '#0F0F23',
     primary100: '#E0F6F3',
-    primary500: '#00D6B1',
-    primary600,
+    primary500: '#f3db5b',
+    primary600: '#FF5733',
     primary800: '#007E76',
     white: white,
     textDarkStrong: black,
@@ -45,9 +45,9 @@ const light = {
   },
   boxShadow: {
     focusRingPrimary: '0 0 0 0.25rem  #ff80804a',
-    focusRingGrey: '0 0 0 0.25rem #F5F5FB',
+    focusRingGrey: '0 0 0 0.20rem #F5F5FB',
     focusRingError: '0 0 0 0.25rem rgba(243, 71, 92, 0.2)',
-    focusRingDestructive: '0 0 0 0.25rem #FFECEE',
+    focusRingDestructive: '0 0 0 0.15rem #FFECEE',
     dropdown: '0 0.5rem 1.25rem 0.25rem rgba(35, 37, 37, 0.1)',
     dropdownSidebar: '0 0.5rem 1.25rem -0.25rem rgba(0, 0, 0, 0.56)',
     modal: '0px 16px 32px -8px rgba(35, 37, 37, 0.16)',

@@ -4,6 +4,19 @@ import GlobalStyle from '../src/styles/global';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
+  backgrounds: {
+    default: 'dark',
+    values: [
+      {
+        name: 'white',
+        value: '#FFFFFF',
+      },
+      {
+        name: 'dark',
+        value: '#22223E',
+      },
+    ],
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,

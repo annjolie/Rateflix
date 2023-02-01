@@ -7,13 +7,13 @@ export const Container = styled.div`
 `;
 
 export const CustomInput = styled.input`
-  color: ${({ theme }) => theme.colors.textDarkStrong};
+  color: ${({ theme }) => theme.colors.supportRedLight};
 
   font-weight: ${({ theme }) => theme.weights.regular};
   font-size: 1rem;
   line-height: 1.5rem;
 
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.textLightWeakSuperPlus};
   border: 1px solid ${({ theme }) => theme.colors.neutralN200};
 
   border-radius: 0.5rem;
@@ -23,13 +23,12 @@ export const CustomInput = styled.input`
   padding-inline: 14px;
 
   ::placeholder {
-    color: ${({ theme }) => theme.colors.textDarkSubtle};
+    color: ${({ theme }) => theme.colors.neutralN300};
   }
 
   :focus:not(:disabled) {
-    border-color: ${({ theme }) => theme.colors.primary600};
     outline: none;
-    box-shadow: ${({ theme }) => theme.boxShadow.focusRingPrimary};
+    box-shadow: ${({ theme }) => theme.boxShadow.focusRingDestructive};
   }
 
   @media screen and (prefers-reduced-motion: reduce) {
