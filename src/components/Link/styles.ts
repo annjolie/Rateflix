@@ -5,7 +5,7 @@ export const Container = styled.div`
   align-items: center;
   text-decoration: none;
   border-radius: 0.375rem;
-  max-width: 6.25rem;
+  width: 7.5rem;
   color: ${({ theme }) => theme.colors.white};
   transition: color ease-out 150ms;
   &:hover,

@@ -3,7 +3,7 @@ import type { MainPosterProps } from './types';
 
 export default function MainPoster({ title, description, image, className }: MainPosterProps): JSX.Element {
   return (
-    <MainImage $image={image}>
+    <MainImage $image={image} className={className}>
       <Title>{title}</Title>
       <Description>{description}</Description>
     </MainImage>

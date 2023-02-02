@@ -10,7 +10,7 @@ const light = {
     mainGradient: 'radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)',
   },
   boxShadow: {
-    focusRingPrimary: '0 0 0 0.25rem  #d76d6d',
+    focusRingPrimary: '0 0 0 0.05rem  #d76d6d',
     dropdown: '0 0.5rem 1.25rem 0.25rem rgba(35, 37, 37, 0.1)',
     dropdownSidebar: '0 0.5rem 1.25rem -0.25rem rgba(0, 0, 0, 0.56)',
     modal: '0px 16px 32px -8px rgba(35, 37, 37, 0.16)',
