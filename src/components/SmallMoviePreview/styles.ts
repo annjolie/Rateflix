@@ -27,14 +27,16 @@ export const Image = styled.img`
 export const Title = styled.h1`
   font-weight: ${({ theme }) => theme.weights.semiBold};
   font-size: 1rem;
-  color: ${({ theme }) => theme.colors.supportRedLight};
+  color: ${({ theme }) => theme.colors.red};
+  max-width: 9.375rem;
+  margin-block-start: 10px;
   text-align: left;
 `;
 
 export const Premiere = styled.p`
   font-weight: ${({ theme }) => theme.weights.regular};
   font-size: 0.875rem;
-  color: ${({ theme }) => theme.colors.supportRedLight};
+  color: ${({ theme }) => theme.colors.white};
   text-align: left;
   padding-block: 0.5rem;
 `;

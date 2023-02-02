@@ -6,12 +6,10 @@ export const Container = styled.div`
   text-decoration: none;
   border-radius: 0.375rem;
   max-width: 6.25rem;
-  color: ${({ theme }) => theme.colors.supportRedLight};
+  color: ${({ theme }) => theme.colors.white};
   transition: color ease-out 150ms;
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary600};
-  }
-  &:focus-visible {
-    color: ${({ theme }) => theme.colors.primary600};
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.colors.red};
   }
 `;

@@ -11,7 +11,7 @@ export default {
   decorators: [withPadding(), withMaxWidth()],
   args: {
     href: '/',
-    label: 'Mis valoraciones',
+    label: 'Mis ratings',
   },
 } as Meta;
 

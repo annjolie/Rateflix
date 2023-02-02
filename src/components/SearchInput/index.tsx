@@ -10,7 +10,7 @@ export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(({ nam
   return (
     <Container className={className}>
       <CustomInput ref={ref} id={inputId} name={name} placeholder={placeholder} />
-      <BsSearch size={20} color={theme.light.colors.supportRedLight} />
+      <BsSearch size={20} color={theme.light.colors.red} title='search icon'/>
     </Container>
   );
 });
