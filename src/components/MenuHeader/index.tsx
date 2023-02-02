@@ -1,16 +1,18 @@
 import Link from '../Link';
+import NextLink from 'next/link';
 import { SearchInput } from '../SearchInput';
 import { Container, Wrapper } from './styles';
 import type { MenuHeaderProps } from './types';
 import Image from 'next/image';
-import rateflixLogo from '../public/rateflix-logo.png';
 
 export default function MenuHeader({ className }: MenuHeaderProps): JSX.Element {
   return (
     <Container className={className}>
-      <Image src={rateflixLogo} width={150} height={20} alt="rateflix-logo" />
+      <NextLink href={'/'}>
+        <Image src='/rateflix-logo.png' width={180} height={100} alt="rateflix-logo" />
+      </NextLink>
       <Wrapper>
-        <Link href={'/mylist'} label={'Mis valoraciones'}></Link>
+        <Link href={'/mylist'} label={'Mis valoraciones'} />
         <SearchInput />
       </Wrapper>
     </Container>
