@@ -4,10 +4,14 @@ import { SmallMoviePreviewProps } from '../SmallMoviePreview/types';
 export function useMovieSlider(movies: SmallMoviePreviewProps[], numVisible: number) {
   const [currentPage, setCurrentPage] = useState(0);
   const [sliderPosition, setSliderPosition] = useState(0);
+  const [visibleMovies, setVisibleMovies] = useState<SmallMoviePreviewProps[]>([]);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const start = currentPage;
-  const end = currentPage + numVisible;
-  const visibleMovies = movies.slice(start, end);
+
+  useEffect(() => {
+    const start = currentPage;
+    const end = currentPage + numVisible;
+    setVisibleMovies(movies.slice(start, end));
+  }, [currentPage, movies, numVisible]);
 
   useEffect(() => {
     setSliderPosition((sliderRef.current?.offsetWidth || 0) / numVisible);

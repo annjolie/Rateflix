@@ -11,7 +11,7 @@ import {
 import type { MovieGroupProps } from './types';
 import { useMovieSlider } from './logic';
 
-export default function MovieGroup({ movies, direction, className }: MovieGroupProps): JSX.Element {
+export default function MovieGroup({ movies, className }: MovieGroupProps): JSX.Element {
   const { visibleMovies, sliderPosition, sliderRef, nextPage, prevPage } = useMovieSlider(movies, 3);
 
   return (

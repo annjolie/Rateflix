@@ -7,7 +7,6 @@ const light = {
     primary600: '#B81D24',
     white: '#F5F5F1',
     posterGradient: 'linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://raw.githubusercontent.com/falconmasters/p-gina-estilo-netflix/carousel/img/backdrop.jpg)',
-    mainGradient: 'radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)',
   },
   boxShadow: {
     focusRingPrimary: '0 0 0 0.05rem  #d76d6d',
