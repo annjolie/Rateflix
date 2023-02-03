@@ -4,13 +4,13 @@ import type { SearchInputProps } from './types';
 import { BsSearch } from 'react-icons/bs';
 import theme from '../../styles/theme';
 
-export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(({ name, placeholder, className }, ref) => {
+export const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(({ name, placeholder }, ref) => {
   const inputId = useId();
 
   return (
-    <Container className={className}>
+    <Container>
       <CustomInput ref={ref} id={inputId} name={name} placeholder={placeholder} />
-      <BsSearch size={20} color={theme.light.colors.red} title='search icon'/>
+      <BsSearch size={20} color={theme.light.colors.red} title="search icon" />
     </Container>
   );
 });

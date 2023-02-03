@@ -1,3 +1,1 @@
-export type MenuHeaderProps = {
-  className?: string;
-};
+export type MenuHeaderProps = {};

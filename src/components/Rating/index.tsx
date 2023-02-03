@@ -1,9 +1,10 @@
 import ReactStars from 'react-stars';
 import React from 'react';
-import type { RatingProps } from './types';
 import theme from '../../styles/theme';
+import { RatingProps } from './types';
 
 export default function Rating({ className }: RatingProps): JSX.Element {
+  console.log({className})
   return (
     <ReactStars
       className={className}

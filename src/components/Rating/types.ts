@@ -1,1 +1,3 @@
-export type RatingProps = { className?: string };
+export type RatingProps = {
+    className?: string;
+};

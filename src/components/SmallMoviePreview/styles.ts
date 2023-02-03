@@ -10,7 +10,7 @@ export const Container = styled.article`
   :hover {
     opacity: 1;
     transition: ease-out 200ms;
-    }
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -21,7 +21,6 @@ export const ImageContainer = styled.div`
 
 export const Image = styled.img`
   max-width: 100%;
-  cursor: pointer;
 `;
 
 export const Title = styled.h1`

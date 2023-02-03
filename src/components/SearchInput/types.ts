@@ -1,5 +1,3 @@
-import { InputHTMLAttributes, ComponentType } from 'react';
+import { InputHTMLAttributes } from 'react';
 
-export type SearchInputProps = InputHTMLAttributes<HTMLInputElement> & {
-  className?: string;
-};
+export type SearchInputProps = InputHTMLAttributes<HTMLInputElement> & {};

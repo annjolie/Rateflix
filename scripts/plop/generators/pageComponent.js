@@ -12,15 +12,9 @@ module.exports = function (plop, projectSrc) {
         type: "input",
         name: "name",
         message: "page component name",
-        validate: firstUpperCase,
       },
     ],
     actions: () => [
-      {
-        type: "add",
-        path: join(projectSrc, "pages/{{name}}/stories.tsx"),
-        templateFile: "templates/pageComponent/stories.tsx.hbs",
-      },
       {
         type: "add",
         path: join(projectSrc, "pages/{{name}}/index.tsx"),

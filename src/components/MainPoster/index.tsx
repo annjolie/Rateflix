@@ -1,11 +1,15 @@
 import { MainImage, Title, Description } from './styles';
+import NextLink from 'next/link';
+
 import type { MainPosterProps } from './types';
 
-export default function MainPoster({ title, overview, poster_path, className }: MainPosterProps): JSX.Element {
+export default function MainPoster({ title, overview, poster_path, id }: MainPosterProps): JSX.Element {
   return (
-    <MainImage $poster_path={poster_path} className={className}>
-      <Title>{title}</Title>
-      <Description>{overview}</Description>
-    </MainImage>
+    <NextLink href={'/movie/' + id}>
+      <MainImage $poster_path={poster_path}>
+        <Title>{title}</Title>
+        <Description>{overview}</Description>
+      </MainImage>
+    </NextLink>
   );
 }

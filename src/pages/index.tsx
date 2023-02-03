@@ -10,6 +10,7 @@ export default function Home() {
     <>
       <main>
         <MainPoster
+          id={278}
           title="The Martian"
           overview="En 2035, durante una misión a Marte de la nave tripulada Ares III, una fuerte tormenta se desata, por lo que, tras haber dado por desaparecido y muerto al astronauta Mark Watney (Matt Damon), sus compañeros toman la decisión de … "
           poster_path="https://images.tmdb.org/t/p/w500/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg"
