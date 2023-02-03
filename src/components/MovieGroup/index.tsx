@@ -23,7 +23,7 @@ export default function MovieGroup({ movies, className }: MovieGroupProps): JSX.
         <SliderPosition style={{ left: `-${sliderPosition}px` }}>
           <Suspense fallback={<div>Loading...</div>}>
             {visibleMovies.map((movie) => (
-              <SmallMoviePreview key={movie.title} image={movie.image} title={movie.title} premiere={movie.premiere} />
+              <SmallMoviePreview key={movie.title} poster_path={movie.poster_path} title={movie.title} release_date={movie.release_date} />
             ))}
           </Suspense>
         </SliderPosition>

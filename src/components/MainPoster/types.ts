@@ -1,10 +1,9 @@
-export type MainPosterProps = {
-  title: string;
-  description: string;
-  image: string;
+import { MovieType } from "@/common/types/movieType";
+
+export type MainPosterProps = Pick<MovieType, 'id' | 'title' | 'overview' | 'poster_path'> & {
   className?: string;
 };
 
 export type MainPosterStyledProps = {
-    $image: string;
+    $poster_path: MainPosterProps['poster_path'];
 };

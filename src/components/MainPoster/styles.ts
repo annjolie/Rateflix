@@ -7,10 +7,9 @@ export const MainImage = styled.div<MainPosterStyledProps>`
   font-size: 1rem;
   min-height: 40.62rem;
   color: ${({ theme }) => theme.colors.white};
-  background: ${({ theme }) => theme.colors.posterGradient}, url(${({ $image }) => $image});
+  background: ${({ theme }) => theme.colors.posterGradient}, url(${({ $poster_path }) => $poster_path});
   background-position: center center;
   background-size: cover;
-  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
