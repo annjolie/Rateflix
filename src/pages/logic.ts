@@ -10,7 +10,6 @@ export const useLogic = () => {
 
   useEffect(() => {
     async function fetchData() {
-      // You can await here
       const { data: searchResultsData } = await searchMovies('a', 1);
       const { data: popularMoviesData } = await getPopularMovies();
       if (popularMoviesData) {

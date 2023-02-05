@@ -9,8 +9,6 @@ const instance = axios.create({
   timeout: 1000,
 });
 
-console.log(process.env.API_URL, process.env.API_KEY);
-
 type AxiosError = {
   data: null;
   error: Error;
@@ -36,24 +34,22 @@ export const getGenres = async (): Promise<{ data: any } | AxiosError> =>
 export const searchMovies = async (
   query: string,
   page: number,
-): Promise<{ data: PaginationResponseType<MovieType> } | AxiosError> => {
-  console.log(instance.defaults);
-  return instance
+): Promise<{ data: PaginationResponseType<MovieType> } | AxiosError> =>
+  instance
     .get('/search/movie', { params: { query, page } })
-    .then(({ data }) => data)
+    .then(({ data }) => ({ data }))
     .catch((error) => handleAxiosError(error));
-};
 
 export const createGuestSession = async (): Promise<any | AxiosError> => {
   instance
     .get('/authentication/guest_session/new')
-    .then(({ data }) => data)
+    .then(({ data }) => ({ data }))
     .catch((error) => handleAxiosError(error));
 };
 
 export const rateMovie = async (movieId: number, rating: number, guestSessionId: string): Promise<any | AxiosError> => {
   instance
     .post(`/movie/${movieId}/rating`, { value: rating }, { params: { guest_session_id: guestSessionId } })
-    .then(({ data }) => data)
+    .then(({ data }) => ({ data }))
     .catch((error) => handleAxiosError(error));
 };

@@ -1,9 +1,9 @@
 import ReactStars from 'react-stars';
 import React from 'react';
-import theme from '../../styles/theme';
+import theme from '@/styles/theme';
 import { RatingProps } from './types';
 
-export default function Rating(): JSX.Element {
+export default function Rating({ onClick }: RatingProps): JSX.Element {
   return (
     <ReactStars
       count={10}
@@ -12,7 +12,7 @@ export default function Rating(): JSX.Element {
       color2={theme.light.colors.red}
       size={20}
       half={true}
-      onChange={(rating) => console.log(rating)}
+      onChange={onClick}
     />
   );
 }

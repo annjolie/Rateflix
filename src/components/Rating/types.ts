@@ -1,1 +1,3 @@
-export type RatingProps = {};
+export type RatingProps = {
+  onClick: (rating: number) => void;
+};
