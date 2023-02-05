@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <MainPoster {...movieForPoster} />
+        {movieForPoster && <MainPoster {...movieForPoster} />}
         <Title>Peliculas populares</Title>
         <MovieGroup movies={popularMovies} />
         <Title>Todas las peliculas</Title>

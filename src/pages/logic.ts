@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getPopularMovies, searchMovies } from '../axios';
+import { getPopularMovies, searchMovies } from '@/axios';
 import { MovieType } from '@/common/types/movieType';
 import { SmallMoviePreviewProps } from '@/components/SmallMoviePreview/types';
 

@@ -1,8 +1,10 @@
+import { GenreType } from "./genresType";
+
 export type MovieType = {
   id?: number;
   adult?: boolean;
   overview?: string;
-  genre_ids?: number[];
+  genres?: GenreType[];
   original_title?: string;
   original_language?: string;
   backdrop_path?: string;
