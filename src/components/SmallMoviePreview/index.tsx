@@ -21,7 +21,7 @@ export default function SmallMoviePreview({
         </ImageContainer>
         <Title>{title}</Title>
         <Premiere>{release_date}</Premiere>
-        {rating && <Rating rating={rating} onClick={() => {}} />}
+        {rating && <Rating rating={rating} onClick={() => {}} editable={false} />}
       </NextLink>
     </Container>
   );

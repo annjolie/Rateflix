@@ -3,7 +3,7 @@ import React from 'react';
 import theme from '@/styles/theme';
 import { RatingProps } from './types';
 
-export default function Rating({ rating, onClick }: RatingProps): JSX.Element {
+export default function Rating({ rating, editable, onClick }: RatingProps): JSX.Element {
   return (
     <ReactStars
       count={10}
@@ -13,6 +13,7 @@ export default function Rating({ rating, onClick }: RatingProps): JSX.Element {
       size={16}
       half={true}
       onChange={onClick}
+      edit={editable}
     />
   );
 }
