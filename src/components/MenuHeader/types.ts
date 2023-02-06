@@ -1,1 +1,3 @@
-export type MenuHeaderProps = {};
+export type SearchForm = {
+  searchInput: string;
+};

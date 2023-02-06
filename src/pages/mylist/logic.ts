@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getMovieDetails } from '@/axios';
 import { SmallMoviePreviewProps } from '@/components/SmallMoviePreview/types';
 import createPersistedState from 'use-persisted-state';
-import { RATED_MOVIE_LIST_KEY } from '@/axios/constants';
+import { RATED_MOVIE_LIST_KEY } from '@/common/const/constants';
 import { RatedMovieType } from '@/common/types/ratedMovieType';
 
 const useRatedMovieListState = createPersistedState(RATED_MOVIE_LIST_KEY);
@@ -13,21 +13,21 @@ export const useLogic = () => {
 
   useEffect(() => {
     async function fetchData() {
+      const newMovies: SmallMoviePreviewProps[] = [];
       for (const ratedMovie of ratedMovieList) {
         const { data: movieDetail } = await getMovieDetails(ratedMovie.id);
         if (movieDetail) {
-          const movie: SmallMoviePreviewProps = {
+          newMovies.push({
             id: movieDetail.id,
             release_date: movieDetail.release_date,
             title: movieDetail.title,
             poster_path: movieDetail.poster_path,
             rating: ratedMovie.rating,
-          };
-          setMovies((movies) => [...movies, movie]);
+          });
         }
       }
+      setMovies(newMovies);
     }
-    setMovies([]);
     fetchData();
   }, [ratedMovieList]);
   return {

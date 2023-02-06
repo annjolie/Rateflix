@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { createGuestSession, getMovieDetails, rateMovie } from '@/axios';
 import { MovieType } from '@/common/types/movieType';
-import { GUEST_SESSION_KEY, RATED_MOVIE_LIST_KEY } from '@/axios/constants';
+import { GUEST_SESSION_KEY, RATED_MOVIE_LIST_KEY } from '@/common/const/constants';
 import { GuestSessionType } from '@/common/types/guestSessionType';
 import { RatedMovieType } from '@/common/types/ratedMovieType';
 import createPersistedState from 'use-persisted-state';

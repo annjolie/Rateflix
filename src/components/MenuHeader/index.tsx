@@ -3,8 +3,11 @@ import NextLink from 'next/link';
 import { SearchInput } from '../SearchInput';
 import { Container, Wrapper } from './styles';
 import Image from 'next/image';
+import { useLogic } from './logic';
 
 export default function MenuHeader(): JSX.Element {
+  const { register, handleSearchInput } = useLogic();
+
   return (
     <Container>
       <NextLink href={'/'}>
@@ -12,7 +15,7 @@ export default function MenuHeader(): JSX.Element {
       </NextLink>
       <Wrapper>
         <Link href={'/mylist'} label={'Mis valoraciones'} />
-        <SearchInput />
+        <SearchInput {...register('searchInput')} onKeyDown={handleSearchInput} />
       </Wrapper>
     </Container>
   );
