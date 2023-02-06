@@ -10,7 +10,7 @@ export default function Rating({ rating, onClick }: RatingProps): JSX.Element {
       value={rating}
       color1={theme.light.colors.white}
       color2={theme.light.colors.red}
-      size={20}
+      size={16}
       half={true}
       onChange={onClick}
     />

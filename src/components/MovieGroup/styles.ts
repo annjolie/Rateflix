@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import { lazy } from 'react';
 import { ArrowStylesProps } from './types';
 import Preview from '../SmallMoviePreview';
 

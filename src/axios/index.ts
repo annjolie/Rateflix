@@ -1,5 +1,4 @@
 import { URL } from '@/common/const/url';
-import { GenresResponseType } from '@/common/types/genresResponseType';
 import { GuestSessionType } from '@/common/types/guestSessionType';
 import { MovieType } from '@/common/types/movieType';
 import { PaginationResponseType } from '@/common/types/paginationResponseType';

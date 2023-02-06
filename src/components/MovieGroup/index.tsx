@@ -29,6 +29,7 @@ export default function MovieGroup({ movies }: MovieGroupProps): JSX.Element {
                 poster_path={movie.poster_path}
                 title={movie.title}
                 release_date={movie.release_date}
+                rating={movie.rating}
               />
             ))}
           </Suspense>

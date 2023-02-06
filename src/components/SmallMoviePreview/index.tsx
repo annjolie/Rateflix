@@ -3,12 +3,14 @@ import NextLink from 'next/link';
 
 import type { SmallMoviePreviewProps } from './types';
 import { URL } from '@/common/const/url';
+import Rating from '../Rating';
 
 export default function SmallMoviePreview({
   poster_path,
   id,
   title,
   release_date,
+  rating,
   onClick,
 }: SmallMoviePreviewProps): JSX.Element {
   return (
@@ -19,6 +21,7 @@ export default function SmallMoviePreview({
         </ImageContainer>
         <Title>{title}</Title>
         <Premiere>{release_date}</Premiere>
+        {rating && <Rating rating={rating} onClick={() => {}} />}
       </NextLink>
     </Container>
   );

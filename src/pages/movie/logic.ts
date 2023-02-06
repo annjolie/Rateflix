@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { createGuestSession, getGenres, getMovieDetails, rateMovie } from '@/axios';
+import { createGuestSession, getMovieDetails, rateMovie } from '@/axios';
 import { MovieType } from '@/common/types/movieType';
 import { GUEST_SESSION_KEY, RATED_MOVIE_LIST_KEY } from '@/axios/constants';
 import { GuestSessionType } from '@/common/types/guestSessionType';
@@ -44,13 +44,15 @@ export const useLogic = (movieId: number) => {
       return guestSession.guest_session_id || '';
     }
     setGuestSession(null);
+    setRatedMovieList([]);
     const { data: guestSessionData, error: errorGuestSession } = await createGuestSession();
     if (errorGuestSession) {
       console.log('handleGuestSession', { errorGuestSession });
       return '';
     }
     setGuestSession(guestSessionData);
-  }, [guestSession, setGuestSession]);
+    return guestSessionData.guest_session_id;
+  }, [guestSession, setGuestSession, setRatedMovieList]);
 
   const handleRating = useCallback(
     async (newRating: number) => {
